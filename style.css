@@ -1,0 +1,121 @@
+*{margin: 0;padding: 0;box-sizing: border-box;font-family: 'Josefin Sans', sans-serif;
+color: white;}
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('images/sea-beach.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: changebg 60s linear infinite;
+}
+nav{
+    height: 15vh;
+    width: 100%;
+    background-color: rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    text-transform: uppercase;
+}
+nav .logo{
+    width: 25%;
+    text-align: center;
+}
+nav .menu{
+    width: 40%;
+    /* color: white; */
+    display: flex;
+    justify-content: space-around;
+}
+nav .menu a{
+    width: 25%;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav .menu a:hover{
+    color: #00b894;
+    transition: all 0.5s ease;
+}
+nav .menu a:first-child{
+    color: #00b894;
+}
+main{
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+section h3{
+    font-size: 35px;
+    font-weight: 200;
+    text-shadow: 1px 1px 2px #000;
+    letter-spacing: 2px;
+}
+section h1{
+    text-transform: uppercase;
+    margin: 30px 0 20px 0;
+    font-size: 55px;
+    font-weight: 700;
+    text-shadow: 2px 1px 5px #000;
+}
+section p{
+    font-size: 30px;
+    text-shadow: 1px 1px 1px #000;
+    word-spacing: 2px;
+    margin-bottom: 35px;
+    color: #eee;
+    text-transform: lowercase;
+}
+
+section a{
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: none;
+    padding: 20px 30px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.5s ease;
+}
+
+section a.btnone{
+    background-color: white;
+    color: black;
+}
+section a.btnone:hover{
+    background-color: #00b894;
+    color: white;
+}
+section a.btntwo{
+    background-color: #00b894;
+    color: white;
+}
+section a.btntwo:hover{
+    background-color: white;
+    color: black;
+}
+.change_content:after{
+    content: '';
+    color: #00b894;
+    animation: changetext 60s linear  infinite ;
+}
+@keyframes changetext{
+    0%{content: "Sea Beach";}
+    25%{content: "Marine Drive";}
+    50%{content: "Himchori";}
+    75%{content: "Inani";}
+    100%{content: "Royal Tulip";}
+}
+@keyframes changebg{
+    0%{background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('images/sea-beach.jpg');}
+    25%{background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('images/marin-drive.png');}
+    50%{background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('images/himchori.png');}
+    75%{background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('images/inani.png');}
+    100%{background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url('images/royal-tulip.png');}
+}
